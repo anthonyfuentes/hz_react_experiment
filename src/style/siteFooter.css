@@ -6,3 +6,9 @@
 .site-footer > .footer-copy {
   background-color: #e5e3e0;
 }
+
+.footer-copy {
+  display: flex;
+  justify-content: space-between;
+}
+

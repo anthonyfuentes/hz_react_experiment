@@ -6,7 +6,7 @@ const Masthead = (props) => {
   const {heading} = props
 
   return (
-    <header className="masthead">
+    <header className="masthead layout-top">
       <h1>
         {heading}
       </h1>
