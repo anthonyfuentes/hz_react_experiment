@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import '../style/siteFooter.css'
 
 const SiteFooter = (props) => {
@@ -10,8 +9,8 @@ const SiteFooter = (props) => {
         (footer links)
       </div>
       <div className="footer-copy layout-top">
-        <span className="show-left">Copyright © 2012 Hubzilla</span>
-        <span className="show-right">
+        <span>Copyright © 2012 Hubzilla</span>
+        <span>
           Powered by <a href="https://help.hubzero.org">HUBzero®</a>, a Purdue project
         </span>
       </div>

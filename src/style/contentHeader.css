@@ -1,0 +1,12 @@
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f4f6f7;
+  background-color: #5aa1ce;
+}
+
+.content-header > .heading {
+  font-size: 1.9em;
+}

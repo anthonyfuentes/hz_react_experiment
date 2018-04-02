@@ -1,0 +1,21 @@
+
+.projects-info {
+  display: flex;
+  padding: 60px 60px 60px 60px;
+}
+
+.projects-info h3 {
+  font-size: 1.4em;
+}
+
+.projects-info .col {
+  margin-right: 3%;
+}
+
+.projects-info .span5 {
+  width: 42%;
+}
+
+.projects-info .span4 {
+  width: 30%;
+}
