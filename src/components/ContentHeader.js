@@ -8,7 +8,11 @@ const ContentHeader = (props) => {
   return (
     <header className="content-header layout-top">
       <span className="heading">{heading}</span>
-      <span className="">Browse public projects</span>
+      <span id="browse-link">
+        <a href="https://bossk.aws.hubzero.org/projects/browse">
+          Browse public projects
+        </a>
+      </span>
     </header>
   )
 }

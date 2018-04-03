@@ -5,8 +5,23 @@
   align-items: center;
   color: #f4f6f7;
   background-color: #5aa1ce;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .content-header > .heading {
   font-size: 1.9em;
 }
+
+.content-header > #browse-link > a {
+  border: 1px solid #ededed;
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 5px 7px 5px;
+}
+
+.content-header > #browse-link > a:hover {
+  background-color: #fff;
+  color: #444;
+}
+
