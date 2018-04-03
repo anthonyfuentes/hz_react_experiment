@@ -1,6 +1,13 @@
 
 .site-footer > .footer-links {
+  display: flex;
   background-color: #d3c2c2;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.site-footer > .footer-links .span4 {
+  width: 25%;
 }
 
 .site-footer > .footer-copy {

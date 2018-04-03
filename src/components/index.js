@@ -8,6 +8,7 @@ import ProjectsList from './ProjectsList'
 import SiteFooter from './SiteFooter'
 import SiteHeader from './SiteHeader'
 import SubMasthead from './SubMasthead'
+import TitledLinkList from './TitledLinkList'
 
 export {
   ContentHeader,
@@ -18,5 +19,6 @@ export {
   ProjectsList,
   SiteFooter,
   SiteHeader,
-  SubMasthead
+  SubMasthead,
+  TitledLinkList
 }
