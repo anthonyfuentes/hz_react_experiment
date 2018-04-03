@@ -1,6 +1,11 @@
 import React from 'react'
 import {shallow} from 'enzyme'
-import {ContentHeader,Projects} from '../../components'
+import {
+  ContentHeader,
+  Projects,
+  SiteFooter,
+  SiteHeader
+} from '../../components'
 
 describe('Projects', () => {
 
@@ -16,6 +21,15 @@ describe('Projects', () => {
     expect(hasClass).toBe(true)
   })
 
+  it('renders the site header', () => {
+    const wrapper = shallow(<Projects />)
+    const siteHeader = <SiteHeader />
+
+    const rendersSiteHeader = wrapper.containsMatchingElement(siteHeader)
+
+    expect(rendersSiteHeader).toBe(true)
+  })
+
   it('renders the content header', () => {
     const wrapper = shallow(<Projects />)
     const contentHeader = <ContentHeader heading="Projects" />
@@ -24,5 +38,15 @@ describe('Projects', () => {
 
     expect(rendersContentHeadaer).toBe(true)
   })
+
+  it('renders the site footer', () => {
+    const wrapper = shallow(<Projects />)
+    const siteFooter = <SiteFooter />
+
+    const rendersSiteFooter = wrapper.containsMatchingElement(siteFooter)
+
+    expect(rendersSiteFooter).toBe(true)
+  })
+
 
 })

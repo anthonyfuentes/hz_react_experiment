@@ -21,3 +21,8 @@
 .projects-intro .span4 {
   width: 30%;
 }
+
+.projects-intro .btn-light {
+  border: 1px solid gray;
+  border-radius: 0;
+}

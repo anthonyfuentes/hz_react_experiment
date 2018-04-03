@@ -1,7 +1,12 @@
 
 .not-found {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   border: none;
 }
 
+.not-found .row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

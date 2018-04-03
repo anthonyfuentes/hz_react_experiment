@@ -8,7 +8,9 @@ const ProjectsIntro = (props) => {
       <span className="col span5">
         <h3>Collaboration made easy</h3>
         <p>Whether working on a new funding proposal, research paper or developing an application, projects are a great way to manage your data, workflow and communication.</p>
-        <button>Start a project</button>
+        <button className="btn btn-light">
+          Start a project
+        </button>
       </span>
       <span className="col span4">
         <h3>With each project you get:</h3>
@@ -19,7 +21,9 @@ const ProjectsIntro = (props) => {
           <li>Options to publish data</li>
           <li>Publication management</li>
         </ul>
-        <button>Learn more >></button>
+        <button className="btn btn-light">
+          Learn more >>
+        </button>
       </span>
     </div>
   )

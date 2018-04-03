@@ -1,4 +1,26 @@
 
 .sub-masthead {
   background-color: #549bc8;
+  border-bottom: 1px solid #bababa;
+  color: #cfcfcf;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: .95em;
+  padding-top: .95em;
+}
+
+.sub-masthead .inverse {
+  background-color: #cfcfcf;
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+  color: #549bc8;
+  font-weight: bold;
+  height: 1.5em;
+  padding-left: .4em;
+  width: 1.5em;
+}
+
+.sub-masthead .inverse > a {
+  color: #549bc8;
+  text-decoration: none;
 }

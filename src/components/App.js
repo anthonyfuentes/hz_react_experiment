@@ -1,18 +1,15 @@
 import React from 'react'
-import {Route} from 'react-router-dom'
+import {Route,Switch} from 'react-router-dom'
 import '../style/app.css'
-import {
-  Projects,
-  SiteHeader,
-  SiteFooter
-} from './'
+import {NotFound,Projects} from './'
 
 const App = (props) => {
   return (
     <div className="app">
-      <SiteHeader />
-      <Route path="/" component={Projects} />
-      <SiteFooter />
+      <Switch>
+        <Route path="/projects" component={Projects} />
+        <Route component={NotFound} />
+      </Switch>
     </div>
   )
 }
