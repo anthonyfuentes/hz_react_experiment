@@ -10,5 +10,9 @@
 .footer-copy {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  color: #aaa;
+  font-size: .85em;
 }
 
