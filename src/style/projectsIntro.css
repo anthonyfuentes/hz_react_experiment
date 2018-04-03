@@ -1,0 +1,23 @@
+
+.projects-intro {
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.projects-intro h3 {
+  font-size: 1.4em;
+}
+
+.projects-intro .col {
+  margin-right: 3%;
+  padding: 0;
+}
+
+.projects-intro .span5 {
+  width: 42%;
+}
+
+.projects-intro .span4 {
+  width: 30%;
+}

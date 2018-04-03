@@ -1,0 +1,13 @@
+
+.projects-list {
+  background-color: #f9f9f9;
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+
+.projects-list h2 {
+  line-height: 1.3;
+  font-size: 1.9em;
+  font-weight: 300;
+  margin: 0;
+}

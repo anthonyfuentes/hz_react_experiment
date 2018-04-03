@@ -1,6 +1,10 @@
 import React from 'react'
 import {shallow} from 'enzyme'
-import {ProjectsInfo} from '../../components'
+import {
+  ProjectsInfo,
+  ProjectsIntro,
+  ProjectsList
+} from '../../components'
 
 describe('ProjectsInfo', () => {
 
@@ -14,6 +18,24 @@ describe('ProjectsInfo', () => {
     const hasClass = wrapper.hasClass('projects-info')
 
     expect(hasClass).toBe(true)
+  })
+
+  it('renders the projects intro', () => {
+    const wrapper = shallow(<ProjectsInfo />)
+    const projectsIntro = <ProjectsIntro />
+
+    const rendersProjectsIntro = wrapper.containsMatchingElement(projectsIntro)
+
+    expect(rendersProjectsIntro).toBe(true)
+  })
+
+  it('renders the projects list', () => {
+    const wrapper = shallow(<ProjectsInfo />)
+    const projectsList = <ProjectsList />
+
+    const rendersProjectsList = wrapper.containsMatchingElement(projectsList)
+
+    expect(rendersProjectsList).toBe(true)
   })
 
 })
