@@ -1,6 +1,8 @@
 
 import Breadcrumbs from './Breadcrumbs'
 import ContentHeader from './ContentHeader'
+import DropMenu from './DropMenu'
+import DropMenuItem from './DropMenuItem'
 import Masthead from './Masthead'
 import NotFound from './NotFound'
 import Projects from './Projects'
@@ -15,6 +17,8 @@ import TitledLinkList from './TitledLinkList'
 export {
   Breadcrumbs,
   ContentHeader,
+  DropMenu,
+  DropMenuItem,
   Masthead,
   NotFound,
   Projects,

@@ -1,4 +1,27 @@
 
-.masthead > * {
-  display: inline;
+.masthead {
+  display: flex;
+  align-items: center;
 }
+
+.masthead .col {
+  display: flex;
+  align-items: center;
+}
+
+.masthead h1 {
+  margin-right: 30px;
+}
+
+.masthead .user-thumb {
+  border: 2px solid #626262;
+  border-radius: 50%;
+  max-height: 35px;
+  max-width: 35px;
+}
+
+.masthead .search {
+  margin-right: 30px;
+  text-decoration: none;
+}
+

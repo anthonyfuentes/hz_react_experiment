@@ -20,7 +20,7 @@ SiteHeader.propTypes = {
 }
 
 SiteHeader.defaultProps = {
-  heading: '<hub name>'
+  heading: 'bossk'
 }
 
 export default SiteHeader
