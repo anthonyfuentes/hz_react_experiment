@@ -7,6 +7,7 @@ const Breadcrumbs = (props) => {
 
   const buildLinks = () => {
     const urlSegments = getUrlSegments()
+    urlSegments.shift()
 
     const links = urlSegments.map((segment, i) => {
       const pathChain = urlSegments.slice(0, i + 1)
@@ -20,9 +21,10 @@ const Breadcrumbs = (props) => {
 
   const buildLink = (path, key) => {
     let linkText = buildLinkText(path)
+    const relativeUrl = `/${path.join('/')}`
 
     return(
-      <span key={key}> / <Link to="">
+      <span key={key}> / <Link to={relativeUrl}>
           {linkText}
         </Link>
       </span>
@@ -55,7 +57,7 @@ const Breadcrumbs = (props) => {
 
   return (
     <span className="breadcrumbs">
-      <Link to="/">Projects</Link>
+      <Link to="/projects">Projects</Link>
       {buildLinks()}
     </span>
   )
