@@ -5,8 +5,9 @@
 }
 
 .masthead .col {
-  display: flex;
   align-items: center;
+  display: flex;
+  padding-left: 0;
 }
 
 .masthead h1 {

@@ -1,15 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import '../style/contentHeader.css'
+import {RouteConfig as Routes } from '../config'
 
 const ContentHeader = (props) => {
   const {heading} = props
 
   return (
     <header className="content-header layout-top">
-      <span className="heading">{heading}</span>
+      <span className="heading">
+        {heading}
+      </span>
       <span id="browse-link">
-        <a href="https://bossk.aws.hubzero.org/projects/browse">
+        <a href={`${Routes.bosskBaseUrl}/projects/browse`}>
           Browse public projects
         </a>
       </span>

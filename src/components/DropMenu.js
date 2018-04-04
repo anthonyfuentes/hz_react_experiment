@@ -46,7 +46,9 @@ class DropMenu extends Component {
 }
 
 DropMenu.propTypes = {
-  items: PropTypes.array.isRequired
+  items: PropTypes.array.isRequired,
+  title: PropTypes.string.isRequired,
+  toggleStyles: PropTypes.object
 }
 
 DropMenu.defaultProps = {

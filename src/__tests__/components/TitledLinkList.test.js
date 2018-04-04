@@ -5,11 +5,11 @@ import {TitledLinkList} from '../../components'
 describe('TitledLinkList', () => {
 
   it('renders without crashing', () => {
-    shallow(<TitledLinkList />)
+    shallow(<TitledLinkList title="" />)
   })
 
   it('has the class "titled-link-list"', () => {
-    const wrapper = shallow(<TitledLinkList />)
+    const wrapper = shallow(<TitledLinkList title="" />)
 
     const hasClass = wrapper.hasClass('titled-link-list')
 
@@ -19,7 +19,7 @@ describe('TitledLinkList', () => {
   it('renders a list item for each link', () => {
     const links = {a:'',b:'',c:''}
     const linkCount = Object.keys(links).length
-    const wrapper = shallow(<TitledLinkList links={links} />)
+    const wrapper = shallow(<TitledLinkList title="" links={links} />)
 
     const renderedItemCount = wrapper.find('li').length
 

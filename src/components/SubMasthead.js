@@ -1,6 +1,7 @@
 import React from 'react'
 import {Breadcrumbs} from './'
 import '../style/subMasthead.css'
+import {RouteConfig as Routes} from '../config'
 
 const SubMasthead = (props) => {
 
@@ -10,7 +11,7 @@ const SubMasthead = (props) => {
         You are here: <Breadcrumbs />
       </span>
       <span className="inverse">
-        <a href="https://bossk.aws.hubzero.org/support">
+        <a href={`${Routes.bosskBaseUrl}/support`}>
           ?
         </a>
       </span>

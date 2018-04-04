@@ -1,27 +1,27 @@
 import React from 'react'
 import {shallow} from 'enzyme'
 import {
-  ProjectsInfo,
+  ProjectsHome,
   ProjectsIntro,
   ProjectsList
 } from '../../components'
 
-describe('ProjectsInfo', () => {
+describe('ProjectsHome', () => {
 
   it('renders without crashing', () => {
-    shallow(<ProjectsInfo />)
+    shallow(<ProjectsHome />)
   })
 
-  it('has the class "projects-info"', () => {
-    const wrapper = shallow(<ProjectsInfo />)
+  it('has the class "projects-home"', () => {
+    const wrapper = shallow(<ProjectsHome />)
 
-    const hasClass = wrapper.hasClass('projects-info')
+    const hasClass = wrapper.hasClass('projects-home')
 
     expect(hasClass).toBe(true)
   })
 
   it('renders the projects intro', () => {
-    const wrapper = shallow(<ProjectsInfo />)
+    const wrapper = shallow(<ProjectsHome />)
     const projectsIntro = <ProjectsIntro />
 
     const rendersProjectsIntro = wrapper.containsMatchingElement(projectsIntro)
@@ -30,7 +30,7 @@ describe('ProjectsInfo', () => {
   })
 
   it('renders the projects list', () => {
-    const wrapper = shallow(<ProjectsInfo />)
+    const wrapper = shallow(<ProjectsHome />)
     const projectsList = <ProjectsList />
 
     const rendersProjectsList = wrapper.containsMatchingElement(projectsList)

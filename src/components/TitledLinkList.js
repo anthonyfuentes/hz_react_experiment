@@ -19,12 +19,11 @@ const TitledLinkList = (props) => {
 }
 
 TitledLinkList.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   links: PropTypes.object
 }
 
 TitledLinkList.defaultProps = {
-  title: '',
   links: {}
 }
 

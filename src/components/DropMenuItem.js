@@ -4,7 +4,7 @@ import {DropdownItem} from 'reactstrap'
 
 const DropMenuItem = (props) => {
   const CLASS_NAME = 'drop-menu-item'
-  const {text,link,divider} = props
+  const {content,url,divider} = props
 
   const buildItem = () => {
     let item
@@ -19,13 +19,14 @@ const DropMenuItem = (props) => {
   }
 
   const buildDivider = () => {
-    return <DropdownItem divider className={CLASS_NAME} />
+    return <DropdownItem divider
+              className={`${CLASS_NAME} divider`} />
   }
 
   const buildLinkItem = () => {
     return (
       <DropdownItem className={CLASS_NAME}>
-        <a href={link}>{text}</a>
+        <a href={url}>{content}</a>
       </DropdownItem>
     )
   }
@@ -36,14 +37,12 @@ const DropMenuItem = (props) => {
 }
 
 DropMenuItem.propTypes = {
-  text: PropTypes.string,
-  link: PropTypes.string,
-  divider: PropTypes.bool
+  content: PropTypes.any.isRequired,
+  divider: PropTypes.bool,
+  url: PropTypes.string.isRequired
 }
 
 DropMenuItem.defaultProps = {
-  text: '',
-  link: '#',
   divider: false
 }
 

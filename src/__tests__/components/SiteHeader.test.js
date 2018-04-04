@@ -20,22 +20,20 @@ describe('SiteHeader', () => {
     expect(hasClass).toBe(true)
   })
 
-  it('renders the masthead', () => {
-    const wrapper = shallow(<SiteHeader heading='' />)
-    const masthead = <Masthead />
+  it('renders one masthead', () => {
+    const wrapper = shallow(<SiteHeader />)
 
-    const rendersMasthead = wrapper.containsMatchingElement(masthead)
+    const mastheadCount = wrapper.find(Masthead).length
 
-    expect(rendersMasthead).toBe(true)
+    expect(mastheadCount).toBe(1)
   })
 
-  it('renders the sub-masthead', () => {
+  it('renders one sub-masthead', () => {
     const wrapper = shallow(<SiteHeader heading='' />)
-    const subMasthead = <SubMasthead />
 
-    const rendersSubMasthead = wrapper.containsMatchingElement(subMasthead)
+    const subMastheadCount = wrapper.find(SubMasthead).length
 
-    expect(rendersSubMasthead).toBe(true)
+    expect(subMastheadCount).toBe(1)
   })
 
 })

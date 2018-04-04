@@ -20,9 +20,10 @@ describe('Masthead', () => {
   it('renders the correct dropdown menus', () => {
     const toggleStyles = Config.dropMenuToggleStyles
     const dropMenus = Config.menus.map((menu) =>
-      <DropMenu {...menu} toggleStyles={toggleStyles} />)
-    const wrapper = shallow(<Masthead />)
+      <DropMenu {...menu} toggleStyles={toggleStyles} />
+    )
 
+    const wrapper = shallow(<Masthead />)
     const containsDropMenus = wrapper.contains(dropMenus)
 
     expect(containsDropMenus).toBe(true)

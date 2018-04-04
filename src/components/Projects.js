@@ -1,6 +1,6 @@
 import React from 'react'
 import {Route} from 'react-router-dom'
-import {ContentHeader,ProjectsInfo,SiteFooter,SiteHeader} from './'
+import {ContentHeader,ProjectsHome,SiteFooter,SiteHeader} from './'
 
 const Projects = (props) => {
 
@@ -8,7 +8,7 @@ const Projects = (props) => {
     <div className="projects">
       <SiteHeader />
       <ContentHeader heading="Projects" />
-      <Route path="/projects" component={ProjectsInfo} />
+      <Route path="/projects" component={ProjectsHome} />
       <SiteFooter />
     </div>
   )

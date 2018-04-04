@@ -26,8 +26,8 @@ const Masthead = (props) => {
         <a className="search" href={`${Routes.bosskBaseUrl}/search`}>
           <span role="img" aria-label="magnifying glass">&#x1F50D;</span>
         </a>
-        <a href="#">
-          <img className="user-thumb" src={UserSilhouette} />
+        <a href={`${Routes.bosskBaseUrl}/members`}>
+          <img alt="user silhouette" className="user-thumb" src={UserSilhouette} />
         </a>
       </span>
     </header>
