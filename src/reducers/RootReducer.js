@@ -1,7 +1,8 @@
 import {combineReducers} from 'redux'
+import {ProjectsReducer} from './'
 
 const RootReducer = combineReducers({
-  state: (state = {}) => state
+  projects: ProjectsReducer // {<id>: <project data>}
 })
 
 export default RootReducer

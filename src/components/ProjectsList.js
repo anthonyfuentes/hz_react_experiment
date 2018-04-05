@@ -2,11 +2,12 @@ import React from 'react'
 import '../style/projectsList.css'
 
 const ProjectsList = (props) => {
+  const {projects} = props
 
   return (
     <section className="projects-list layout-top">
       <h2>My Projects</h2>
-      {/* map projects */}
+      {/*projects.map((project,i) => <Project key={i} {...project})*/}
     </section>
   )
 }

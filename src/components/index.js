@@ -5,6 +5,7 @@ import DropMenu from './DropMenu'
 import DropMenuItem from './DropMenuItem'
 import Masthead from './Masthead'
 import NotFound from './NotFound'
+import Project from './Project'
 import Projects from './Projects'
 import ProjectsHome from './ProjectsHome'
 import ProjectsIntro from './ProjectsIntro'
@@ -21,6 +22,7 @@ export {
   DropMenuItem,
   Masthead,
   NotFound,
+  Project,
   Projects,
   ProjectsHome,
   ProjectsIntro,

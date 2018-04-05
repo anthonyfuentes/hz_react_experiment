@@ -9,11 +9,11 @@ import {
 describe('ProjectsHome', () => {
 
   it('renders without crashing', () => {
-    shallow(<ProjectsHome />)
+    shallow(<ProjectsHome fetchProjects={()=>{}} projects={{}} />)
   })
 
   it('has the class "projects-home"', () => {
-    const wrapper = shallow(<ProjectsHome />)
+    const wrapper = shallow(<ProjectsHome fetchProjects={()=>{}} projects={{}} />)
 
     const hasClass = wrapper.hasClass('projects-home')
 
@@ -21,7 +21,7 @@ describe('ProjectsHome', () => {
   })
 
   it('renders the projects intro', () => {
-    const wrapper = shallow(<ProjectsHome />)
+    const wrapper = shallow(<ProjectsHome fetchProjects={()=>{}} projects={{}} />)
     const projectsIntro = <ProjectsIntro />
 
     const rendersProjectsIntro = wrapper.containsMatchingElement(projectsIntro)
@@ -30,7 +30,7 @@ describe('ProjectsHome', () => {
   })
 
   it('renders the projects list', () => {
-    const wrapper = shallow(<ProjectsHome />)
+    const wrapper = shallow(<ProjectsHome fetchProjects={()=>{}} projects={{}} />)
     const projectsList = <ProjectsList />
 
     const rendersProjectsList = wrapper.containsMatchingElement(projectsList)
