@@ -8,6 +8,7 @@ import {
   FETCH_PROJECTS_SUCCESS,
   FETCH_PROJECTS_FAILURE
 } from './types'
+import {ErrorsActions} from './'
 
 const fetchProjectsRequest = () => {
   const action = {
@@ -26,10 +27,9 @@ const fetchProjectsSuccess = (payload) => {
   return action
 }
 
-const fetchProjectsFailure = (payload) => {
+const fetchProjectsFailure = () => {
   const action = {
-    type: FETCH_PROJECTS_FAILURE,
-    payload
+    type: FETCH_PROJECTS_FAILURE
   }
 
   return action
@@ -48,7 +48,8 @@ export const fetchProjects = () => {
         dispatch(fetchProjectsSuccess(response))
       })
       .catch(response => {
-        dispatch(fetchProjectsFailure(response))
+        dispatch(fetchProjectsFailure())
+        dispatch(ErrorsActions.addError('Something went wrong: unable to load projects'))
       })
   }
 

@@ -1,8 +1,10 @@
 import {combineReducers} from 'redux'
+import {ErrorsReducer} from './'
 import {ProjectsReducer} from './'
 
 const RootReducer = combineReducers({
-  projects: ProjectsReducer // {<id>: <project data>}
+  errors: ErrorsReducer,
+  projects: ProjectsReducer
 })
 
 export default RootReducer
