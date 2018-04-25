@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {RouteConfig} from '../config'
+import {RouteConfig as Routes} from '../config'
 import '../style/breadcrumbs.css'
 
 const Breadcrumbs = (props) => {
@@ -47,7 +47,7 @@ const Breadcrumbs = (props) => {
   }
 
   const getRelativeUrl = () => {
-    const baseUrl = RouteConfig.baseUrl
+    const baseUrl = Routes.baseUrl
     const currentUrl = window.location.href
 
     const relativeUrl = currentUrl.replace(baseUrl, '')

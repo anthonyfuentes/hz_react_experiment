@@ -1,6 +1,6 @@
-import RouteConfig from './RouteConfig.js'
+import {default as Hub} from './HubConfig.js'
 
-const BOSSK_BASE_URL = RouteConfig.bosskBaseUrl
+const HUB_BASE_URL = Hub.routes.baseUrl
 
 const MastheadConfig = {
   dropMenuToggleStyles: {
@@ -13,45 +13,45 @@ const MastheadConfig = {
     {
       title: 'DISCOVER',
       items: [
-        {content: 'Courses', url:`${BOSSK_BASE_URL}/courses`},
-        {content: 'Collections', url:`${BOSSK_BASE_URL}/collection`},
-        {content: 'Blog', url:`${BOSSK_BASE_URL}/blog`},
-        {content: 'Resources', url:`${BOSSK_BASE_URL}/resources`},
+        {content: 'Courses', url:`${HUB_BASE_URL}/courses`},
+        {content: 'Collections', url:`${HUB_BASE_URL}/collection`},
+        {content: 'Blog', url:`${HUB_BASE_URL}/blog`},
+        {content: 'Resources', url:`${HUB_BASE_URL}/resources`},
         {divider: true, content: '', url:''},
-        {content: 'Tags', url:`${BOSSK_BASE_URL}/tags`},
-        {content: 'Wiki', url:`${BOSSK_BASE_URL}/wiki`},
-        {content: 'Citations', url:`${BOSSK_BASE_URL}/citations`},
-        {content: 'Events', url:`${BOSSK_BASE_URL}/events`},
+        {content: 'Tags', url:`${HUB_BASE_URL}/tags`},
+        {content: 'Wiki', url:`${HUB_BASE_URL}/wiki`},
+        {content: 'Citations', url:`${HUB_BASE_URL}/citations`},
+        {content: 'Events', url:`${HUB_BASE_URL}/events`},
       ]
     },
     {
       title: 'COMMUNITY',
       items: [
-        {content: 'Forum', url:`${BOSSK_BASE_URL}/forum`},
-        {content: 'Members', url:`${BOSSK_BASE_URL}/members`},
-        {content: 'Groups', url:`${BOSSK_BASE_URL}/groups`},
-        {content: 'Projects', url:`${BOSSK_BASE_URL}/projects`},
-        {content: 'Questions & Answers', url:`${BOSSK_BASE_URL}/answers`}
+        {content: 'Forum', url:`${HUB_BASE_URL}/forum`},
+        {content: 'Members', url:`${HUB_BASE_URL}/members`},
+        {content: 'Groups', url:`${HUB_BASE_URL}/groups`},
+        {content: 'Projects', url:`${HUB_BASE_URL}/projects`},
+        {content: 'Questions & Answers', url:`${HUB_BASE_URL}/answers`}
       ]
     },
     {
       title: 'ABOUT',
       items: [
-        {content: 'Newsletter', url:`${BOSSK_BASE_URL}/newsletter`},
+        {content: 'Newsletter', url:`${HUB_BASE_URL}/newsletter`},
         {divider: true, content: '', url:''},
-        {content: 'Contact Us', url:`${BOSSK_BASE_URL}/contact`},
-        {content: 'Terms of Use', url:`${BOSSK_BASE_URL}/terms`},
-        {content: 'Copyright Infringement', url:`${BOSSK_BASE_URL}/copyright`},
-        {content: 'Our Cyberinfrastructure', url:`${BOSSK_BASE_URL}/about/hubzero`}
+        {content: 'Contact Us', url:`${HUB_BASE_URL}/contact`},
+        {content: 'Terms of Use', url:`${HUB_BASE_URL}/terms`},
+        {content: 'Copyright Infringement', url:`${HUB_BASE_URL}/copyright`},
+        {content: 'Our Cyberinfrastructure', url:`${HUB_BASE_URL}/about/hubzero`}
       ]
     },
     {
       title: 'SUPPORT',
       items: [
-        {content: 'Knowledge Base', url:`${BOSSK_BASE_URL}/kb`},
-        {content: 'Report a Problem', url:`${BOSSK_BASE_URL}/feedback/report_problems`},
-        {content: 'Tickets', url:`${BOSSK_BASE_URL}/support/tickets`},
-        {content: 'Wish List', url:`${BOSSK_BASE_URL}/wishlist`}
+        {content: 'Knowledge Base', url:`${HUB_BASE_URL}/kb`},
+        {content: 'Report a Problem', url:`${HUB_BASE_URL}/feedback/report_problems`},
+        {content: 'Tickets', url:`${HUB_BASE_URL}/support/tickets`},
+        {content: 'Wish List', url:`${HUB_BASE_URL}/wishlist`}
       ]
     }
   ]

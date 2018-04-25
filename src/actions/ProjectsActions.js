@@ -1,7 +1,7 @@
 import axios from 'axios'
 import {
   Secrets,
-  RouteConfig as Routes
+  HubConfig as Hub
 } from '../config'
 import {
   FETCH_PROJECTS_REQUEST,
@@ -39,9 +39,9 @@ export const fetchProjects = () => {
   const thunk = (dispatch) => {
     dispatch(fetchProjectsRequest())
 
-    const apiKey = Secrets.bosskApiKey
+    const apiKey = Secrets.hubApiKey
     const headers = {Authorization: `Bearer ${apiKey}`}
-    const projectsFetchUrl = `${Routes.bosskBaseUrl}/api/v1.1/projects/list`
+    const projectsFetchUrl = `${Hub.routes.baseUrl}/api/v1.1/projects/list`
 
     axios.get(projectsFetchUrl, {headers})
       .then(response => {

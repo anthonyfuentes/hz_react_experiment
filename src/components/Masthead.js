@@ -5,7 +5,7 @@ import '../style/masthead.css'
 import UserSilhouette from '../assets/images/user_silhouette.svg'
 import {
   MastheadConfig as Config,
-  RouteConfig as Routes
+  HubConfig as Hub
 } from '../config'
 
 const Masthead = (props) => {
@@ -23,10 +23,10 @@ const Masthead = (props) => {
         )}
       </span>
       <span>
-        <a className="search" href={`${Routes.bosskBaseUrl}/search`}>
+        <a className="search" href={`${Hub.routes.baseUrl}/search`}>
           <span role="img" aria-label="magnifying glass">&#x1F50D;</span>
         </a>
-        <a href={`${Routes.bosskBaseUrl}/members`}>
+        <a href={`${Hub.routes.baseUrl}/members`}>
           <img alt="user silhouette" className="user-thumb" src={UserSilhouette} />
         </a>
       </span>

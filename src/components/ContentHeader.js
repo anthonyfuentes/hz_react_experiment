@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import '../style/contentHeader.css'
-import {RouteConfig as Routes } from '../config'
+import {HubConfig as Hub } from '../config'
 
 const ContentHeader = (props) => {
   const {heading} = props
@@ -12,7 +12,7 @@ const ContentHeader = (props) => {
         {heading}
       </span>
       <span id="browse-link">
-        <a href={`${Routes.bosskBaseUrl}/projects/browse`}>
+        <a href={`${Hub.routes.baseUrl}/projects/browse`}>
           Browse public projects
         </a>
       </span>
