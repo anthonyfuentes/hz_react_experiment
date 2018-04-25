@@ -1,14 +1,21 @@
-import {FETCH_PROJECTS_SUCCESS} from '../actions/types'
+import {
+  FETCH_PROJECTS_SUCCESS,
+  FETCH_PROJECTS_FAILURE
+} from '../actions/types'
 
 const ProjectsReducer = (state = {}, {payload, type}) => {
   switch (type) {
     case FETCH_PROJECTS_SUCCESS:
       const newState = {...state}
-      payload.data.projects.forEach((project) => {
-        let id = +project.id.split('-')[1]
-        newState[id] = project
+      const projects = payload.data.projects.map((project) => {
+        return {...project, id: +project.id.split('-')[1]}
+      })
+      projects.forEach((project) => {
+        newState[project.id] = project
       })
       return newState
+    case FETCH_PROJECTS_FAILURE:
+      return {}
     default:
       return state
   }

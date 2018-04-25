@@ -4,7 +4,6 @@ describe('ProjectsActions', () => {
 
   describe('fetchProjects', () => {
     it('', () => {
-
     })
   })
 

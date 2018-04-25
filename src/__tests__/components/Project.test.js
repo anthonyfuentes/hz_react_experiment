@@ -8,4 +8,12 @@ describe('Project', () => {
     shallow(<Project />)
   })
 
+  it('has the class "project"', () => {
+    const wrapper = shallow(<Project />)
+
+    const hasClass = wrapper.hasClass('project')
+
+    expect(hasClass).toBe(true)
+  })
+
 })

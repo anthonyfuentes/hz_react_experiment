@@ -31,7 +31,7 @@ describe('ProjectsHome', () => {
 
   it('renders the projects list', () => {
     const wrapper = shallow(<ProjectsHome fetchProjects={()=>{}} projects={{}} />)
-    const projectsList = <ProjectsList />
+    const projectsList = <ProjectsList projects={{}} />
 
     const rendersProjectsList = wrapper.containsMatchingElement(projectsList)
 

@@ -5,11 +5,11 @@ import {ProjectsList} from '../../components'
 describe('ProjectsList', () => {
 
   it('renders without crashing', () => {
-    shallow(<ProjectsList />)
+    shallow(<ProjectsList projects={{}} />)
   })
 
   it('has the class "projects-list"', () => {
-    const wrapper = shallow(<ProjectsList />)
+    const wrapper = shallow(<ProjectsList projects={{}} />)
 
     const hasClass = wrapper.hasClass('projects-list')
 
