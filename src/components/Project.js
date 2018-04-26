@@ -3,14 +3,12 @@ import {Link} from 'react-router-dom'
 import '../style/project.css'
 
 const Project = (props) => {
-  const {title} = props
+  const {id,title} = props
 
   return (
-    <span className="project">
-      <Link to="#">
-        <div>{title}</div>
-      </Link>
-    </span>
+    <Link to={`/projects/${id}`} className="project">
+      <div>{title}</div>
+    </Link>
   )
 }
 

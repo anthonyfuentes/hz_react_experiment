@@ -1,6 +1,6 @@
 import React from 'react'
 import {shallow} from 'enzyme'
-import {Project,ProjectsList} from '../../components'
+import {ProjectsList} from '../../components'
 
 describe('ProjectsList', () => {
 
@@ -15,15 +15,5 @@ describe('ProjectsList', () => {
 
     expect(hasClass).toBe(true)
   })
-
-  it('renders the correct number of project components', () => {
-    const projects = {1:{},2:{}}
-    const wrapper = shallow(<ProjectsList projects={projects} />)
-
-    const renderedWrapperCount = wrapper.find(Project).length
-
-    expect(renderedWrapperCount).toBe(Object.keys(projects).length)
-  })
-
 
 })
