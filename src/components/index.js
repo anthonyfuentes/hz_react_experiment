@@ -12,6 +12,7 @@ import Notification from './Notification'
 import Project from './Project'
 import Projects from './Projects'
 import ProjectsHome from './ProjectsHome'
+import ProjectsShow from './ProjectsShow'
 import ProjectsIntro from './ProjectsIntro'
 import ProjectsList from './ProjectsList'
 import SiteFooter from './SiteFooter'
@@ -33,6 +34,7 @@ export {
   Project,
   Projects,
   ProjectsHome,
+  ProjectsShow,
   ProjectsIntro,
   ProjectsList,
   SiteFooter,
