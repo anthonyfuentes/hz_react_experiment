@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
-import {BrowserRouter} from 'react-router-dom'
+import {BrowserRouter,Route} from 'react-router-dom'
 import {createStore, applyMiddleware} from 'redux'
 import thunk from 'redux-thunk'
 import RootReducer from './reducers/RootReducer.js'
@@ -14,7 +14,7 @@ const store = createStore(RootReducer, applyMiddleware(thunk))
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <AppContainer />
+      <Route component={AppContainer} />
     </BrowserRouter>
   </Provider>,
   document.getElementById('root')

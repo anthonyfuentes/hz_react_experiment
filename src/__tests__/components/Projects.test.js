@@ -30,15 +30,6 @@ describe('Projects', () => {
     expect(rendersSiteHeader).toBe(true)
   })
 
-  it('renders the content header', () => {
-    const wrapper = shallow(<Projects />)
-    const contentHeader = <ContentHeader heading="Projects" />
-
-    const rendersContentHeadaer = wrapper.containsMatchingElement(contentHeader)
-
-    expect(rendersContentHeadaer).toBe(true)
-  })
-
   it('renders the site footer', () => {
     const wrapper = shallow(<Projects />)
     const siteFooter = <SiteFooter />

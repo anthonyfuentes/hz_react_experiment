@@ -5,13 +5,13 @@ import '../style/breadcrumbs.css'
 
 const Breadcrumbs = (props) => {
 
-  const buildLinks = () => {
+  const buildBreadcrumbs = () => {
     const urlSegments = getUrlSegments()
-    urlSegments.shift()
 
     const links = urlSegments.map((segment, i) => {
-      const pathChain = urlSegments.slice(0, i + 1)
-      const link = buildLink(pathChain, i)
+      const pathSegments = urlSegments.slice(0, i + 1)
+      const isLast = urlSegments.length === (i + 1)
+      const link = buildBreadcrumb(pathSegments, i, isLast)
 
       return link
     })
@@ -19,14 +19,33 @@ const Breadcrumbs = (props) => {
     return links
   }
 
-  const buildLink = (path, key) => {
-    let linkText = buildLinkText(path)
-    const relativeUrl = `/${path.join('/')}`
+  const buildBreadcrumb = (pathSegments, key, isLast) => {
+    let breadcrumb
+    let linkText = buildLinkText(pathSegments)
+    const relativeUrl = `/${pathSegments.join('/')}`
 
+    if (!isLast) {
+      breadcrumb = buildLink(linkText, relativeUrl, key)
+    } else {
+      breadcrumb = buildLast(linkText, key)
+    }
+
+    return breadcrumb
+  }
+
+  const buildLink = (linkText, relativeUrl, key) => {
     return(
-      <span key={key}> / <Link to={relativeUrl}>
+      <span key={key}>
+        <Link to={relativeUrl}>
           {linkText}
-        </Link>
+        </Link> / </span>
+    )
+  }
+
+  const buildLast = (linkText, key) => {
+    return(
+      <span key={key}>
+        {linkText}
       </span>
     )
   }
@@ -57,8 +76,7 @@ const Breadcrumbs = (props) => {
 
   return (
     <span className="breadcrumbs">
-      <Link to="/projects">Projects</Link>
-      {buildLinks()}
+      {buildBreadcrumbs()}
     </span>
   )
 }

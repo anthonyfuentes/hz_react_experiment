@@ -1,6 +1,7 @@
 import React from 'react'
 import {shallow} from 'enzyme'
 import {
+  ContentHeader,
   ProjectsHome,
   ProjectsIntro,
   ProjectsList
@@ -18,6 +19,15 @@ describe('ProjectsHome', () => {
     const hasClass = wrapper.hasClass('projects-home')
 
     expect(hasClass).toBe(true)
+  })
+
+  it('renders the content header', () => {
+    const wrapper = shallow(<ProjectsHome fetchProjects={() => {}} projects={{}}/>)
+    const contentHeader = <ContentHeader heading="Projects" />
+
+    const rendersContentHeader = wrapper.containsMatchingElement(contentHeader)
+
+    expect(rendersContentHeader).toBe(true)
   })
 
   it('renders the projects intro', () => {

@@ -1,6 +1,8 @@
 import {combineReducers} from 'redux'
-import {ErrorsReducer} from './'
-import {ProjectsReducer} from './'
+import {
+  ErrorsReducer,
+  ProjectsReducer
+} from './'
 
 const RootReducer = combineReducers({
   errors: ErrorsReducer,

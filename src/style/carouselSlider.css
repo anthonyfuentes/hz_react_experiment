@@ -1,8 +1,10 @@
 
 .carousel-slider {
   display: flex;
+  overflow-x: scroll;
 }
 
 .carousel-slider > .element {
   margin: 0 10px 0 0;
 }
+

@@ -1,0 +1,31 @@
+
+.project-info {
+  padding: 30px 30px 30px 30px;
+}
+
+.project-info h3 {
+  color: #484848;
+  font-weight: 400;
+  font-size: 1.4em;
+}
+
+.project-info #edit-link {
+  float: right;
+}
+
+.project-info table {
+  width: 100%;
+}
+
+.project-info table > tbody > tr {
+  border-bottom: 1px solid #dadada;
+}
+
+.project-info table td:first-child {
+  padding: 1em;
+}
+
+.project-info table td:first-child {
+  color: #666;
+  font-weight: bold;
+}

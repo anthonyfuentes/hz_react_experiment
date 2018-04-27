@@ -29,7 +29,5 @@ const ProjectsIntro = (props) => {
   )
 }
 
-
-
 export default ProjectsIntro
 

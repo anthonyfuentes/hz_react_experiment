@@ -1,0 +1,28 @@
+
+.project-sidebar img {
+  max-width: 100%;
+}
+
+.project-sidebar .list-group-item {
+  background-color: #494949;
+  border-color: #222;
+  border-radius: 0;
+  color: #a0a0a0;
+  padding-bottom: .5em;
+  padding-left: 6.5em;
+  padding-right: 2em;
+  padding-top: .5em;
+}
+
+.project-sidebar .list-group-item:hover {
+  background-color: #222;
+  color: #fff;
+  cursor: pointer;
+}
+
+.project-sidebar .list-group-item.active {
+  background-color: #f6f6f6;
+  border-color: #f6f6f6;
+  color: #090909;
+  font-weight: bold;
+}

@@ -1,0 +1,15 @@
+
+.project-not-found {
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.project-not-found h3 {
+  font-size: 1.4em;
+}
+
+.project-not-found .col {
+  margin-right: 3%;
+  padding: 0;
+}

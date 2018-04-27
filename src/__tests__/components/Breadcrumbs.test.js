@@ -17,7 +17,7 @@ describe('Breadcrumbs', () => {
     expect(hasClass).toBe(true)
   })
 
-  it('renders a link for each subpath in the url', () => {
+  it('renders a link for all but the last segment in the url', () => {
     const subPaths = ['a','b','c']
     Object.defineProperty(window.location, 'href', {
       writable: true,
@@ -27,7 +27,7 @@ describe('Breadcrumbs', () => {
     const wrapper = shallow(<Breadcrumbs />)
     const renderedLinkCount = wrapper.find(Link).length
 
-    expect(renderedLinkCount).toEqual(subPaths.length)
+    expect(renderedLinkCount).toEqual(subPaths.length - 1)
   })
 
 })

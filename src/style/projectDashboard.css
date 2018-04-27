@@ -1,0 +1,17 @@
+
+.project-dashboard {
+  display: flex;
+}
+
+.project-dashboard .project-sidebar {
+  width: 25%;
+  min-width: 335px;
+  max-width: 350px;
+}
+
+.project-dashboard .project-area {
+  background-color: #f6f6f6;
+  min-width: 75%;
+  width: 100%;
+}
+

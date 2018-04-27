@@ -1,6 +1,10 @@
 import React,{Component} from 'react'
 import PropTypes from 'prop-types'
-import {ProjectsIntro,ProjectsList} from './'
+import {
+  ContentHeader,
+  ProjectsIntro,
+  ProjectsList
+} from './'
 
 class ProjectsHome extends Component {
 
@@ -12,10 +16,13 @@ class ProjectsHome extends Component {
     const {projects} = this.props
 
     return (
-      <section className="projects-home">
-        <ProjectsIntro />
-        <ProjectsList projects={projects} />
-      </section>
+      <div className="projects-home">
+        <ContentHeader heading="Projects" />
+        <section>
+          <ProjectsIntro />
+          <ProjectsList projects={projects} />
+        </section>
+      </div>
     )
   }
 
