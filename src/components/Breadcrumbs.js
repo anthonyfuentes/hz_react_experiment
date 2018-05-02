@@ -1,53 +1,29 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 import {RouteHelper as Router} from '../helpers'
 import '../style/breadcrumbs.css'
+import {Breadcrumb} from './'
 
 const Breadcrumbs = (props) => {
 
   const buildBreadcrumbs = () => {
     const urlSegments = Router.getUrlSegments()
 
-    const links = urlSegments.map((segment, i) => {
+    const breadcrumbs = urlSegments.map((segment, i) => {
       const pathSegments = urlSegments.slice(0, i + 1)
       const isLast = urlSegments.length === (i + 1)
-      const link = buildBreadcrumb(pathSegments, i, isLast)
+      const breadcrumb = buildBreadcrumb(pathSegments, i, isLast)
 
-      return link
+      return breadcrumb
     })
 
-    return links
+    return breadcrumbs
   }
 
   const buildBreadcrumb = (pathSegments, key, isLast) => {
-    let breadcrumb
-    let linkText = buildLinkText(pathSegments)
-    const relativeUrl = `/${pathSegments.join('/')}`
+    let text = buildLinkText(pathSegments)
+    const url = `/${pathSegments.join('/')}`
 
-    if (!isLast) {
-      breadcrumb = buildLink(linkText, relativeUrl, key)
-    } else {
-      breadcrumb = buildLast(linkText, key)
-    }
-
-    return breadcrumb
-  }
-
-  const buildLink = (linkText, relativeUrl, key) => {
-    return(
-      <span key={key}>
-        <Link to={relativeUrl}>
-          {linkText}
-        </Link> / </span>
-    )
-  }
-
-  const buildLast = (linkText, key) => {
-    return(
-      <span key={key}>
-        {linkText}
-      </span>
-    )
+    return <Breadcrumb key={key} text={text} url={url} isLast={isLast} />
   }
 
   const buildLinkText = (path) => {

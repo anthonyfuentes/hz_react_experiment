@@ -1,7 +1,6 @@
 import React from 'react'
 import {shallow} from 'enzyme'
-import {Link} from 'react-router-dom'
-import {Breadcrumbs} from '../../components'
+import {Breadcrumb,Breadcrumbs} from '../../components'
 
 describe('Breadcrumbs', () => {
 
@@ -17,17 +16,17 @@ describe('Breadcrumbs', () => {
     expect(hasClass).toBe(true)
   })
 
-  it('renders a link for all but the last segment in the url', () => {
-    const subPaths = ['a','b','c']
+  it('renders a Breadcrumb for all segments of the url', () => {
+    const segments = ['a','b','c']
     Object.defineProperty(window.location, 'href', {
       writable: true,
-      value: `http://localhost:3000/${subPaths.join('/')}`
+      value: `http://localhost:3000/${segments.join('/')}`
     })
 
     const wrapper = shallow(<Breadcrumbs />)
-    const renderedLinkCount = wrapper.find(Link).length
+    const breadcrumbCount = wrapper.find(Breadcrumb).length
 
-    expect(renderedLinkCount).toEqual(subPaths.length - 1)
+    expect(breadcrumbCount).toEqual(segments.length)
   })
 
 })

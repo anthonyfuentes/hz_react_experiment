@@ -1,5 +1,6 @@
 
 import App from './App'
+import Breadcrumb from './Breadcrumb'
 import Breadcrumbs from './Breadcrumbs'
 import CarouselSlider from './CarouselSlider'
 import ContentHeader from './ContentHeader'
@@ -29,6 +30,7 @@ import TitledLinkList from './TitledLinkList'
 
 export {
   App,
+  Breadcrumb,
   Breadcrumbs,
   CarouselSlider,
   ContentHeader,
