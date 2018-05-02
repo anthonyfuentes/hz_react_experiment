@@ -1,12 +1,12 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {RouteConfig as Routes} from '../config'
+import {RouteHelper as Router} from '../helpers'
 import '../style/breadcrumbs.css'
 
 const Breadcrumbs = (props) => {
 
   const buildBreadcrumbs = () => {
-    const urlSegments = getUrlSegments()
+    const urlSegments = Router.getUrlSegments()
 
     const links = urlSegments.map((segment, i) => {
       const pathSegments = urlSegments.slice(0, i + 1)
@@ -57,31 +57,12 @@ const Breadcrumbs = (props) => {
     return linkText
   }
 
-  const getUrlSegments = () => {
-    const relativeUrl = getRelativeUrl()
-
-    const urlSegments = relativeUrl.split('/')
-
-    return urlSegments
-  }
-
-  const getRelativeUrl = () => {
-    const baseUrl = Routes.baseUrl
-    const currentUrl = window.location.href
-
-    const relativeUrl = currentUrl.replace(baseUrl, '')
-
-    return relativeUrl
-  }
-
   return (
     <span className="breadcrumbs">
       {buildBreadcrumbs()}
     </span>
   )
 }
-
-
 
 export default Breadcrumbs
 
