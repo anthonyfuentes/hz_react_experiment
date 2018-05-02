@@ -29,7 +29,6 @@ describe('ProjectsShow', () => {
     expect(rendersContentHeader).toBe(true)
   })
 
-
   it('renders the project not found component if project has falsey ID', () => {
     const project = {id:0,title:'Test'}
     const wrapper = shallow(<ProjectsShow fetchProject={()=>{}} project={project} />)

@@ -1,0 +1,30 @@
+
+.new-project-tracker {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.new-project-tracker ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.new-project-tracker > ol > li {
+  display: inline-block;
+  padding: 0.5em 1em 0.5em 1em;
+}
+
+.new-project-tracker .pointer {
+  font-weight: bold;
+}
+
+.new-project-tracker > ol > li.active {
+  background: #20a2c8;
+  color: white;
+}
+
+.new-project-tracker ol > li > a {
+  color: #333;
+  text-decoration: none;
+}

@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import '../style/projectsIntro.css'
 
 const ProjectsIntro = (props) => {
@@ -7,10 +8,13 @@ const ProjectsIntro = (props) => {
     <div className="projects-intro layout-top">
       <span className="col span5">
         <h3>Collaboration made easy</h3>
-        <p>Whether working on a new funding proposal, research paper or developing an application, projects are a great way to manage your data, workflow and communication.</p>
-        <button className="btn btn-light">
+        <p>
+          Whether working on a new funding proposal, research paper or developing an application,
+          projects are a great way to manage your data, workflow and communication.
+        </p>
+        <Link to="/projects/new" className="btn btn-light">
           Start a project
-        </button>
+        </Link>
       </span>
       <span className="col span4">
         <h3>With each project you get:</h3>

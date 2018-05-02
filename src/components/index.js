@@ -8,6 +8,7 @@ import DropMenuItem from './DropMenuItem'
 import ErrorsList from './ErrorsList'
 import ListMenu from './ListMenu'
 import Masthead from './Masthead'
+import NewProjectTracker from './NewProjectTracker'
 import NotFound from './NotFound'
 import Notification from './Notification'
 import Project from './Project'
@@ -17,6 +18,7 @@ import ProjectNotFound from './ProjectNotFound'
 import ProjectSidebar from './ProjectSidebar'
 import Projects from './Projects'
 import ProjectsHome from './ProjectsHome'
+import ProjectsNew from './ProjectsNew'
 import ProjectsShow from './ProjectsShow'
 import ProjectsIntro from './ProjectsIntro'
 import ProjectsList from './ProjectsList'
@@ -35,6 +37,7 @@ export {
   ErrorsList,
   ListMenu,
   Masthead,
+  NewProjectTracker,
   NotFound,
   Notification,
   Project,
@@ -44,6 +47,7 @@ export {
   ProjectSidebar,
   Projects,
   ProjectsHome,
+  ProjectsNew,
   ProjectsShow,
   ProjectsIntro,
   ProjectsList,
